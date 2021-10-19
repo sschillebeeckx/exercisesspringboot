@@ -17,9 +17,9 @@ public class Exb1Application {
 
     @Bean
     public TrainingService trainingService(PersonService ps, CourseService cs){
-        AbisTrainingService ts = new AbisTrainingService();
-        ts.setCourseService(cs);
-        ts.setPersonService(ps);
+        AbisTrainingService ts = new AbisTrainingService(ps,cs);
+       // ts.setCourseService(cs);
+        //ts.setPersonService(ps);
         return ts;
 
     }

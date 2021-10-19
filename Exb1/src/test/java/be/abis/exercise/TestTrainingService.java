@@ -2,6 +2,7 @@ package be.abis.exercise;
 
 import be.abis.exercise.model.Course;
 import be.abis.exercise.model.Person;
+import be.abis.exercise.service.AbisTrainingService;
 import be.abis.exercise.service.TrainingService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

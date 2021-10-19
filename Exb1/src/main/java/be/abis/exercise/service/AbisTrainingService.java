@@ -3,6 +3,7 @@ package be.abis.exercise.service;
 import be.abis.exercise.exception.EnrollException;
 import be.abis.exercise.model.Course;
 import be.abis.exercise.model.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDate;
@@ -12,8 +13,16 @@ public class AbisTrainingService implements TrainingService {
 
     @Value("Welcome to the Abis Training Service")
     private String welcomeMessage;
+
+
     private PersonService personService;
+
     private CourseService courseService;
+
+    public AbisTrainingService(PersonService personService, CourseService courseService) {
+        this.personService = personService;
+        this.courseService = courseService;
+    }
 
     @Override
     public String getWelcomeMessage() {
